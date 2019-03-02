@@ -234,13 +234,6 @@ class GameViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
                 // Show you won message
                 self.youWin.isHidden = false
-                
-                // Wait 2s then execute
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2000), execute: {
-                    // Hide you won message and segue back to start view
-                    self.youWin.isHidden = true
-                    self.performSegue(withIdentifier: "backToStart", sender: self)
-                })
             })
         }
         // If player lost
@@ -249,13 +242,6 @@ class GameViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500), execute: {
                 // Show you lost message
                 self.youLose.isHidden = false
-                
-                // Wait 2s then execute
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2000), execute: {
-                    // Hide you lost message and segue back to start view
-                    self.youLose.isHidden = true
-                    self.performSegue(withIdentifier: "backToStart", sender: self)
-                })
             })
         }
         
